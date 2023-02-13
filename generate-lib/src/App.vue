@@ -1,8 +1,20 @@
-<script setup></script>
-
 <template>
-  <div></div>
+  <div @click="testFun">{{ text }}</div>
 </template>
 
-<style scoped>
-</style>
+<script setup>
+const props = defineProps({
+  text: {
+    type: String,
+    default: '测试'
+  }
+})
+
+const emit = defineEmits(['onTest'])
+
+const testFun = () => {
+  emit('onTest', '数据')
+}
+</script>
+
+<style></style>

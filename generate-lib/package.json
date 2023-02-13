@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
-  "main": "./dist/my-lib.js",
+  "main": "lib/universal-component.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

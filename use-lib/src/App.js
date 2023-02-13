@@ -6,7 +6,10 @@ function App() {
   const dom = useRef(null)
 
   useEffect(() => {
-    renderComponent(Test, dom.current)
+    renderComponent(Test, {
+      text: '哈哈',
+      onCallBack: (e) => { console.log(e) }
+    }, dom.current)
   }, [])
 
   return (
